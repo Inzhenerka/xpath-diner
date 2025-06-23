@@ -210,6 +210,10 @@ var levelTranslations = {
   ]
 };
 
+// keep a copy of the original English level data so switching languages
+// doesn't permanently overwrite it
+var baseLevels;
+
 function applyTranslations() {
   var t = translations[lang] || translations.en;
   $('[data-i18n]').each(function(){
@@ -226,10 +230,14 @@ function applyTranslations() {
       $(this).attr('placeholder', t[key]);
     }
   });
-  if(levelTranslations[lang]){
-    levelTranslations[lang].forEach(function(tr, i){
-      levels[i] = Object.assign({}, levels[i], tr);
+  if(levelTranslations[lang] && baseLevels){
+    levels = baseLevels.map(function(base, i){
+      var tr = levelTranslations[lang][i] || {};
+      return Object.assign({}, base, tr);
     });
+  } else if(baseLevels){
+    // restore original levels when no translations exist
+    levels = baseLevels.map(function(base){ return Object.assign({}, base); });
   }
 }
 
@@ -237,6 +245,10 @@ function initI18n(){
   var browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
   if(browserLang.indexOf('ru') === 0){
     lang = 'ru';
+  }
+  if(!baseLevels){
+    // deep clone the default English levels
+    baseLevels = JSON.parse(JSON.stringify(levels));
   }
   var select = $('<select id="lang-select"><option value="en">English</option><option value="ru">Русский</option></select>');
   select.val(lang);
