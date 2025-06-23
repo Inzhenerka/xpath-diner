@@ -352,6 +352,8 @@ function showHelp() {
   $(".display-help .syntax-example").html(syntaxExample);
   $(".display-help .selector-name").html(selectorName);
   $(".display-help .title").html(helpTitle);
+  var t = translations[lang] || translations.en;
+  $(".display-help .examples-title").text(t.examplesTitle);
   $(".display-help .examples").html("");
   $(".display-help .examples-title").hide(); // Hide the "Examples" heading
 
