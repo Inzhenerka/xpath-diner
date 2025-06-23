@@ -110,7 +110,7 @@ var levelTranslations = {
     },
     {
       doThis: 'Выберите маленькие апельсины в бенто',
-      helpTitle: 'Соберите всё воедино',
+      helpTitle: 'Вы справитесь...',
       syntax: 'Поднажмите!',
       help: 'Скомбинируйте всё, что вы узнали в прошлых уровнях, чтобы пройти этот уровень.'
     },
@@ -195,14 +195,14 @@ var levelTranslations = {
     },
     {
       doThis: "Выберите блюда на имена, начинающиеся с 'Sa'",
-      helpTitle: 'Значение атрибута начинается с',
+      helpTitle: 'Выберите все элементы, значение атрибута которых начинается с указанных символов',
       examples: [
         '<strong>//toy[starts-with(@category,"Swim")]</strong> выбирает элементы <tag>toy</tag> с <strong>category="Swimwear"</strong> или <strong>category="Swimming"</strong>'
       ]
     },
     {
       doThis: "Выберите блюда на имена, оканчивающиеся на 'ato'",
-      helpTitle: 'Значение атрибута оканчивается на',
+      helpTitle: 'Выберите все элементы, значение атрибута которых оканчивается на указанные символы. Функция ends-with является частью XPath 2.0, но браузеры обычно поддерживают только 1.0',
       examples: [
         '<strong>//img[substring(@src, string-length(@src) - string-length(\'.jpg\')+1 ) = \'jpg\']</strong> выбирает все изображения с форматом <strong>.jpg</strong>'
       ]
