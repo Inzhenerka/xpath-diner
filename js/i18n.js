@@ -256,6 +256,10 @@ function initI18n(){
     lang = this.value;
     localStorage.setItem('lang', lang);
     applyTranslations();
+    $('.level-menu .levels').empty();
+    if (typeof buildLevelmenu === 'function') {
+      buildLevelmenu();
+    }
     loadLevel();
   });
   var wrapper = $('<span class="lang-select"/>').append(select);
