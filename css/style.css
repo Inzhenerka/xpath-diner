@@ -89,11 +89,12 @@ header {
   background-position: left center;
   background-size: 16px 16px;
   padding: 6px 5px 6px 22px;
-  color: rgba(255,255,255,.5);
-  border: none;
+  color: rgba(255,255,255,.7);
+  border: 1px solid rgba(255,255,255,.1);
   font-size: 14px;
   appearance: none;
-  background-color: transparent;
+  background-color: rgba(0,0,0,.3);
+  border-radius: 2px;
   cursor: pointer;
 }
 
