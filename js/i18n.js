@@ -258,7 +258,8 @@ function initI18n(){
     applyTranslations();
     loadLevel();
   });
-  $('header').append(select);
+  var wrapper = $('<span class="lang-select"/>').append(select);
+  $('header .share-menu').before(wrapper);
   var stored = localStorage.getItem('lang');
   if(stored){
     lang = stored;

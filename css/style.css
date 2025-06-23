@@ -76,6 +76,27 @@ header {
   color: rgba(255,255,255,.5);
 }
 
+.lang-select {
+  float: right;
+  margin-left: 5px;
+  position: relative;
+  top: -2px;
+}
+
+.lang-select select {
+  background-image: url(../images/icon-language.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  padding: 6px 5px 6px 22px;
+  color: rgba(255,255,255,.5);
+  border: none;
+  font-size: 14px;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .logo {
   cursor: default;
   transform: scale(.2);
