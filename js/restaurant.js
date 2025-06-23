@@ -45,7 +45,9 @@ var blankProgress = {
 var progress = JSON.parse(localStorage.getItem("progress")) || blankProgress;
 
 
+
 $(document).ready(function(){
+  initI18n();
 
   $(".share-menu").on("click","a",function(){
 
@@ -533,7 +535,7 @@ function sendEvent(category, action, label){
 }
 
 function winGame(){
-  $(".table").html('<span class="winner"><strong>You did it!</strong><br>You rock at Xpaths.</span>');
+  $(".table").html((translations[lang] || translations.en).win);
   addNametags();
   finished = true;
   resetTable();
@@ -651,7 +653,8 @@ function loadLevel(){
   loadBoard();
   resetTable();
 
-  $(".level-header .level-text").html("Level " + (currentLevel+1) + " of " + levels.length);
+  var t = translations[lang] || translations.en;
+  $(".level-header .level-text").html(t.levelLabel(currentLevel+1, levels.length));
 
   updateProgressUI(currentLevel, checkCompleted(currentLevel));
 

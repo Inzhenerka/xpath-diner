@@ -8,6 +8,7 @@ permalink: /xpath/
   <head>
     <title>Xpath Diner - Where we feast on Xpath Selectors!</title>
     <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/i18n.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/levels.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/restaurant.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/jquery.mCustomScrollbar.min.js"></script>
@@ -34,7 +35,7 @@ permalink: /xpath/
           <plate><apple /></plate>
         </div>
         <span class="share-menu">
-          Share
+          <span class="share-label" data-i18n="share">Share</span>
           <a class="share-twitter" type="twitter" href="#"></a>
           <a class="share-facebook" type="facebook" href="#"></a>
           <a class="share-email" type="email" href="#"></a>
@@ -43,35 +44,35 @@ permalink: /xpath/
 
       <h2 class="order"></h2>
 
-      <div class="note">
-        <h3>No worries, you've got this!</h3>
-        <p>
-          You're about to learn Xpath Selectors!
-          Selectors are how you pick which elements to focus.
-        </p>
+        <div class="note">
+          <h3 data-i18n="helpStart">No worries, you've got this!</h3>
+          <p data-i18n="learnXPath">
+            You're about to learn Xpath Selectors!
+            Selectors are how you pick which elements to focus.
+          </p>
 
-        <h4>Exhibit 1 - A Xpath Selector</h4>
+          <h4 data-i18n="exhibit">Exhibit 1 - A Xpath Selector</h4>
 
         <pre>
 //Div[@class='header']
 </pre>
 
-        <p>
-          Here, the "//" and "Div" means it will check all paths until it finds a Div element in your document (XML/HTML). "[@class='header']" means the Div has to contain a class attribute with the value header.
-        </p>
-        <p>
-          To play, type in a Xpath selector in the editor below to select the correct items on the table.If you get it right, you'll advance to the next level.
-        </p>
-        <p>
-          Hover over the items on the table to see their HTML markup.
-        </p>
-        <p>
-          Get help with selectors on the right! &rarr;
-        </p>
-        <a class="note-toggle" href="#">Ok, got it!</a>
-      </div>
+          <p data-i18n="stepInfo">
+            Here, the "//" and "Div" means it will check all paths until it finds a Div element in your document (XML/HTML). "[@class='header']" means the Div has to contain a class attribute with the value header.
+          </p>
+          <p data-i18n="typeSelectorInfo">
+            To play, type in a Xpath selector in the editor below to select the correct items on the table.If you get it right, you'll advance to the next level.
+          </p>
+          <p data-i18n="hoverHint">
+            Hover over the items on the table to see their HTML markup.
+          </p>
+          <p data-i18n="helpRight">
+            Get help with selectors on the right! &rarr;
+          </p>
+          <a class="note-toggle" href="#" data-i18n="okGotIt">Ok, got it!</a>
+        </div>
 
-      <a class="note-toggle" href="#">Help, I'm stuck!</a>
+        <a class="note-toggle" href="#" data-i18n="helpStuck">Help, I'm stuck!</a>
 
       <div class="game-wrapper">
         <div class="table-wrapper">
@@ -95,7 +96,7 @@ permalink: /xpath/
             <div class="line-numbers">
               1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20
             </div>
-              <input class="input-strobe" type="text" placeholder="Type in a Xpath selector"/><span class="plus">+</span><div class="enter-button">enter</div>
+              <input class="input-strobe" type="text" placeholder="Type in a Xpath selector" data-i18n-placeholder="placeholder"/><span class="plus">+</span><div class="enter-button" data-i18n="enter">enter</div>
             <div>
             {<br/>
 
@@ -121,14 +122,14 @@ permalink: /xpath/
         </div>
       </div>
 
-      <div class="what-is-this">
-        <p>
-          Made by <a href="http://www.topswagcode.com">TopSwagCode</a> &mdash; come say hi!
-        </p>
-        <p>
-          Have feedback or questions? Please file an isssue on <a href="https://github.com/kiksen1987/xpath-diner/issues">the Github repo</a>.
-        </p>
-      </div>
+        <div class="what-is-this">
+          <p data-i18n="madeBy">
+            Made by <a href="http://www.topswagcode.com">TopSwagCode</a> &mdash; come say hi!
+          </p>
+          <p data-i18n="feedback">
+            Have feedback or questions? Please file an isssue on <a href="https://github.com/kiksen1987/xpath-diner/issues">the Github repo</a>.
+          </p>
+        </div>
 
       <div class="helper"><!-- This is the popup that floats over table elements --></div>
 
@@ -160,11 +161,11 @@ permalink: /xpath/
         </div>
       </div>
 
-      <div class="level-menu">
-        <h2>Choose a level</h2>
-        <div class="levels"><!-- level links are inserted here--></div>
-        <a class="reset-progress" href="#">Reset Progress</a>
-      </div>
+        <div class="level-menu">
+          <h2 data-i18n="chooseLevel">Choose a level</h2>
+          <div class="levels"><!-- level links are inserted here--></div>
+          <a class="reset-progress" href="#" data-i18n="resetProgress">Reset Progress</a>
+        </div>
 
       <div class="level-menu-toggle-wrapper">
         <div class="level-menu-toggle"></div>
