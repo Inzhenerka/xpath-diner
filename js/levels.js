@@ -416,4 +416,20 @@ var levels = [
     <plate id="fancy"><pickle/></plate>
     `
   },
+  {
+    selectorName: "Arrow Operator",
+    helpTitle: "Chain functions with XPath 3.1",
+    doThis: "Select the first plate using =>",
+    selector: "//plate => head()",
+    syntax: "//A => head()",
+    help: "XPath 3.1 introduces the => operator for function chaining. Browsers usually only support XPath 1.0, so this may not work everywhere.",
+    examples: [
+      '<strong>//items/item => sort-by(@price) => head()</strong> selects the cheapest item.'
+    ],
+    boardMarkup:`
+    <plate id="first"/>
+    <plate/>
+    <plate/>
+    `
+  },
   ];
