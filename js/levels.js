@@ -225,7 +225,7 @@ var levels = [
     {
       selectorName: "Index Selector",
       helpTitle: "Select element at given index",
-      syntax: "(A)[Index]",
+      syntax: "(//A)[Index]",
       doThis : "Select the third pickle",
       selector : "(//pickle)[3]",
       help : "You can select a specific element given within a xpath result.",
@@ -255,7 +255,7 @@ var levels = [
       helpTitle: "Select direct children of an element",
       help : "You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. <br><br>Elements that are nested deeper than that are called descendant elements.",
       examples : [
-        '<strong>A//B</strong> will select all <strong>B</strong> that are a direct children <strong>A</strong>'
+        '<strong>A/B</strong> will select all <strong>B</strong> that are direct children of <strong>A</strong>'
       ],
       boardMarkup: `
       <plate>
@@ -274,7 +274,7 @@ var levels = [
     {
       selectorName: "Last selector",
       helpTitle: "Select the last element inside of another element",
-      doThis : "Select the big apple and the big orange",
+      doThis : "Select the last items on all the plates",
       selector : "//plate/*[last()]",
       syntax: "last()",
       help : "You can use this selector to select an element that is the last child element inside of another element. <br><br>Pro Tip &rarr; In cases where there is only one element, that element counts as the first-child, only-child and last-child!",
