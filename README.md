@@ -6,11 +6,12 @@ To play, visit [xpath.inzhenerka.tech](http://xpath.inzhenerka.tech/)
 
 ### Changelog
 
-**June 21, 2025**
+**June 24, 2025**
 
 * Fork game as Inzhenerka.Tech
 * Add Russian translation
-* Fix minor bugs and prettify
+* Fix minor bugs and prettify visual
+* Add new tasks and XPath 3.1
 
 **May 02, 2018**
 

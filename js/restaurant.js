@@ -13,8 +13,26 @@
 
 $.fn.xpathEvaluate = function (xpathExpression) {
 
+    function rewriteArrow(expr){
+        var arrowRegex = /(.*?)=>\s*([A-Za-z0-9:_-]+)\s*\(([^()]*)\)/;
+        while(expr.indexOf('=>') !== -1 && arrowRegex.test(expr)){
+            expr = expr.replace(arrowRegex, function(_, left, fn, args){
+                left = left.trim();
+                args = args.trim();
+                return fn + '(' + left + (args ? ',' + args : '') + ')';
+            });
+        }
+        expr = expr.replace(/head\(([^()]*)\)/g, '($1)[1]');
+        return expr;
+    }
+
+    if (xpathExpression.indexOf('=>') !== -1) {
+        xpathExpression = rewriteArrow(xpathExpression);
+    }
+
     if (xpathExpression.startsWith("//")) {
-        xpathExpression = xpathExpression.substring(2, xpathExpression.length);
+        // Evaluate relative to the game table rather than the document root
+        xpathExpression = '.' + xpathExpression;
     }
 
     xpathResult = document.evaluate(xpathExpression, document.getElementById("gametable"), null, XPathResult.ANY_TYPE, null);
