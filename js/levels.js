@@ -363,8 +363,8 @@ var levels = [
       <bento for="Mary"><orange/></bento>
       `
     },
-    {
-      selectorName: "Attribute Ends With Selector",
+  {
+    selectorName: "Attribute Ends With Selector",
       helpTitle: "Select all elements with an attribute value that ends with specific characters. The 'ends-with' function is part of xpath 2.0 but browsers generally only support 1.0",
       doThis : "Select the items for names that end with 'ato'",
       selector : "//*[substring(@for, string-length(@for) - string-length('ato') +1) = 'ato']",
@@ -380,5 +380,40 @@ var levels = [
       <plate for="Minato"><orange/></plate>
       <pickle class="small"/>
       `
-    },
+  },
+  {
+    selectorName: "Preceding Sibling Selector",
+    helpTitle: "Select an element that comes before another element",
+    doThis: "Select the apples before the fancy plate",
+    selector: "//plate[@id='fancy']/preceding-sibling::apple",
+    syntax: "//A/preceding-sibling::B",
+    help: "This selects all <strong>B</strong> elements that directly precede <strong>A</strong>. Elements on the same indentation level are siblings.",
+    examples: [
+      '<strong>//h2/preceding-sibling::p</strong> selects every <tag>p</tag> that comes right before a <tag>h2</tag>.'
+    ],
+    boardMarkup:`
+    <apple/>
+    <apple/>
+    <plate id="fancy"/>
+    <apple/>
+    <plate><pickle/></plate>
+    `
+  },
+  {
+    selectorName: "Parent Selector",
+    helpTitle: "Select the parent element of another element",
+    doThis: "Select the plates with pickles",
+    selector: "//pickle/parent::plate",
+    syntax: "//A/parent::B",
+    help: "The parent axis selects the direct parent of an element. This example selects each <strong>B</strong> that is a parent of <strong>A</strong>.",
+    examples: [
+      '<strong>//em/..</strong> selects the parent of all <tag>em</tag> elements.'
+    ],
+    boardMarkup:`
+    <plate><pickle/></plate>
+    <plate><orange/></plate>
+    <bento><pickle/></bento>
+    <plate id="fancy"><pickle/></plate>
+    `
+  },
   ];

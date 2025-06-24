@@ -206,6 +206,22 @@ var levelTranslations = {
       examples: [
         '<strong>//img[substring(@src, string-length(@src) - string-length(\'.jpg\')+1 ) = \'jpg\']</strong> выбирает все изображения с форматом <strong>.jpg</strong>'
       ]
+    },
+    {
+      doThis: 'Выберите яблоки перед красивой тарелкой',
+      helpTitle: 'Селектор предыдущего соседа',
+      help: 'Выбирает все элементы <strong>B</strong>, которые непосредственно предшествуют элементу <strong>A</strong>. Такие элементы находятся на одном уровне вложенности.',
+      examples: [
+        '<strong>//h2/preceding-sibling::p</strong> выберет каждый <tag>p</tag>, который сразу стоит перед <tag>h2</tag>'
+      ]
+    },
+    {
+      doThis: 'Выберите тарелки с огурцами',
+      helpTitle: 'Селектор родителя',
+      help: 'Ось parent выбирает непосредственного родителя элемента. В этом примере выбираются все <strong>B</strong>, являющиеся родителями <strong>A</strong>.',
+      examples: [
+        '<strong>//em/..</strong> выберет родителя каждого элемента <tag>em</tag>'
+      ]
     }
   ]
 };
