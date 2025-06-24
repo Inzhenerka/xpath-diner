@@ -1,13 +1,20 @@
-# Welcome to Xpath Diner
+# Welcome to XPath Diner
 
-It's a fun game to learn and practice Xpath selectors.
+It's a fun game to learn and practice XPath selectors.
 
-To play, visit [xpath.topswagcode.com](http://xpath.topswagcode.com/)
+To play, visit [xpath.inzhenerka.tech](http://xpath.inzhenerka.tech/)
 
-### Change Log
+### Changelog
 
-**May 02,2018**
-* Released a new version of the old Xpath game located at [topswagcode.com/](http://topswagcode.com/xpath)
+**June 21, 2025**
+
+* Fork game as Inzhenerka.Tech
+* Add Russian translation
+* Fix minor bugs and prettify
+
+**May 02, 2018**
+
+* Released a new version of the old XPath game.
 
 ### Original CSS diner game can be found here:
 
