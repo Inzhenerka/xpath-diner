@@ -220,7 +220,7 @@ var levelTranslations = {
       helpTitle: 'Селектор родителя',
       help: 'Ось parent выбирает непосредственного родителя элемента. В этом примере выбираются все <strong>B</strong>, являющиеся родителями <strong>A</strong>.',
       examples: [
-        '<strong>//em/..</strong> выберет родителя каждого элемента <tag>em</tag>'
+        '<strong>//em/parent::p</strong> выберет родительский элемент <tag>p</tag> каждого <tag>em</tag>'
       ]
     },
     {

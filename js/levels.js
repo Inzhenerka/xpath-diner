@@ -407,7 +407,7 @@ var levels = [
     syntax: "//A/parent::B",
     help: "The parent axis selects the direct parent of an element. This example selects each <strong>B</strong> that is a parent of <strong>A</strong>.",
     examples: [
-      '<strong>//em/..</strong> selects the parent of all <tag>em</tag> elements.'
+      '<strong>//em/parent::p</strong> selects the parent <tag>p</tag> of each <tag>em</tag> element.'
     ],
     boardMarkup:`
     <plate><pickle/></plate>
