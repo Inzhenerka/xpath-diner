@@ -31,7 +31,8 @@ $.fn.xpathEvaluate = function (xpathExpression) {
     }
 
     if (xpathExpression.startsWith("//")) {
-        xpathExpression = xpathExpression.substring(2, xpathExpression.length);
+        // Evaluate relative to the game table rather than the document root
+        xpathExpression = '.' + xpathExpression;
     }
 
     xpathResult = document.evaluate(xpathExpression, document.getElementById("gametable"), null, XPathResult.ANY_TYPE, null);
